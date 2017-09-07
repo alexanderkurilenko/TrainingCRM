@@ -1,0 +1,17 @@
+C:\Users\a.kurilenko\source\repos\TrainingCRM\WebResources\bin\Debug\ReverseMap\resources.pri
+C:\Users\a.kurilenko\source\repos\TrainingCRM\WebResources\bin\Debug\AppxManifest.xml
+C:\Users\a.kurilenko\source\repos\TrainingCRM\WebResources\bin\Debug\WebResources.build.appxrecipe
+C:\Users\a.kurilenko\source\repos\TrainingCRM\WebResources\bld\Debug\WebResources.jsproj.CoreCompileInputs.cache
+C:\Users\a.kurilenko\source\repos\TrainingCRM\WebResources\bld\Debug\ResourceHandlingTask.state
+C:\Users\a.kurilenko\source\repos\TrainingCRM\WebResources\bld\Debug\priconfig.xml
+C:\Users\a.kurilenko\source\repos\TrainingCRM\WebResources\bld\Debug\priconfig.xml.intermediate
+C:\Users\a.kurilenko\source\repos\TrainingCRM\WebResources\bld\Debug\layout.resfiles
+C:\Users\a.kurilenko\source\repos\TrainingCRM\WebResources\bld\Debug\layout.resfiles.intermediate
+C:\Users\a.kurilenko\source\repos\TrainingCRM\WebResources\bld\Debug\resources.resfiles
+C:\Users\a.kurilenko\source\repos\TrainingCRM\WebResources\bld\Debug\resources.resfiles.intermediate
+C:\Users\a.kurilenko\source\repos\TrainingCRM\WebResources\bld\Debug\pri.resfiles
+C:\Users\a.kurilenko\source\repos\TrainingCRM\WebResources\bld\Debug\pri.resfiles.intermediate
+C:\Users\a.kurilenko\source\repos\TrainingCRM\WebResources\bld\Debug\qualifiers.txt
+C:\Users\a.kurilenko\source\repos\TrainingCRM\WebResources\bld\Debug\qualifiers.txt.intermediate
+C:\Users\a.kurilenko\source\repos\TrainingCRM\WebResources\bld\Debug\MultipleQualifiersPerDimensionFound.txt
+C:\Users\a.kurilenko\source\repos\TrainingCRM\WebResources\bld\Debug\ProjectArchitectures.txt
