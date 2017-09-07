@@ -51,21 +51,8 @@ namespace Training.Plugins.Contacts
 
         }
 
-        #region Private Methods
-        private void ValidateContactPhone(Entity entity, string attribute)
-        {
-            var value = String.Empty;
-            if (entity.Attributes.Contains(attribute))
-                value = entity.GetAttributeValue<string>(attribute);
-
-            if (!ValidateMobilePhone(value))
-            {
-                throw new InvalidPluginExecutionException("Enter valid  " + attribute);
-            }
-
-        }
-
-        private static bool ValidateMobilePhone(string phone)
+       
+        public static bool ValidateMobilePhone(string phone)
         {
             Regex regex = new Regex(@"^[\+][1-9]\d+$");
 
@@ -79,7 +66,8 @@ namespace Training.Plugins.Contacts
             }
         }
 
-        private static bool ValidateCountryCode(string code)
+        
+        public static bool ValidateCountryCode(string code)
         {
             Regex regex = new Regex(@"^[а-яА-Яa-zA-Z]{2}$");
 
@@ -91,6 +79,21 @@ namespace Training.Plugins.Contacts
             {
                 return true;
             }
+        }
+
+        #region Private Methods
+
+        private void ValidateContactPhone(Entity entity, string attribute)
+        {
+            var value = String.Empty;
+            if (entity.Attributes.Contains(attribute))
+                value = entity.GetAttributeValue<string>(attribute);
+
+            if (!ValidateMobilePhone(value))
+            {
+                throw new InvalidPluginExecutionException("Enter valid  " + attribute);
+            }
+
         }
 
         private void ValidateContactAddress(IPluginExecutionContext context)
