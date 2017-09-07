@@ -37,7 +37,7 @@ namespace Training.Plugins.Contacts
 
                 catch (Exception ex)
                 {
-                    tracingService.Trace("MyPlugin: {0}", ex.ToString());
+                    tracingService.Trace("ContactsFieldsValidationPlugin: {0}", ex.ToString());
                     throw;
                 }
             }
