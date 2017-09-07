@@ -55,8 +55,8 @@
       <PackagePath>images\Wide310x150Logo.scale-200.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\a.kurilenko\source\repos\TrainingCRM\WebResources\js\main.js">
-      <PackagePath>js\main.js</PackagePath>
+    <AppxPackagedFile Include="C:\Users\a.kurilenko\source\repos\TrainingCRM\WebResources\js\ContactsFieldsValidation.js">
+      <PackagePath>js\ContactsFieldsValidation.js</PackagePath>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\a.kurilenko\source\repos\TrainingCRM\WebResources\css\default.css">
       <PackagePath>css\default.css</PackagePath>

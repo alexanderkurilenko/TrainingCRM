@@ -51,6 +51,7 @@ namespace Training.Plugins.Contacts
 
         }
 
+        #region Private Methods
         private void ValidateContactPhone(Entity entity, string attribute)
         {
             var value = String.Empty;
@@ -92,10 +93,6 @@ namespace Training.Plugins.Contacts
             }
         }
 
-        /// <summary>
-        /// Checks if any of city or zipcode fields are entered,if any then country code becomes required.
-        /// </summary>
-        /// <param name="entity">The target entity from the input parameters.</param>
         private void ValidateContactAddress(IPluginExecutionContext context)
         {
             Entity preUpdateEntity = context.PostEntityImages["PreUpdateImage"];
@@ -117,5 +114,6 @@ namespace Training.Plugins.Contacts
                     throw new InvalidPluginExecutionException("Enter valid Country Code (2 chars required) : ");
             }
         }
+        #endregion
     }
 }
