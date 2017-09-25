@@ -6,7 +6,7 @@ using Microsoft.Xrm.Sdk;
 
 namespace Training.Portals.Models
 {
-    public class AccountEntityModels
+    public class Account
     {
         public Guid AccountID { get; set; }
         public string AccountName { get; set; }

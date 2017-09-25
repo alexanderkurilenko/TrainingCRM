@@ -1,8 +1,8 @@
-﻿@model  Training.Portals.Models.Account
+﻿@model  Training.Portals.Models.User
 @{
     ViewBag.Title = "Home Page";
 }
-
+<h1>@ViewBag.a</h1>
 <table>
 
     <tr>
@@ -20,30 +20,26 @@
 
                     <td width="100" align="center" class="header_bg">
                         <a href="">
-                            Account name
+                            Name
                         </a>
                     </td>
 
 
                     <td width="80" align="center">
                         <a href="">
-                            Number of Employees
+                            Login
                         </a>
                     </td>
 
 
                     <td width="80" align="center">
                         <a href="">
-                            Revenue
+                           Password
                         </a>
                     </td>
 
 
-                    <td width="70" align="center">
-                        <a href="">
-                            Primary Contact
-                        </a>
-                    </td>
+                   
 
 
                     <td width="120" align="center" class="header_bg">Action</td>
@@ -66,28 +62,26 @@
 
 
                         <td>
-                            @x.AccountName
+                            @x.Name
                         </td>
 
 
                         <td>
-                            @x.NumberOfEmployees
+                            @x.Login
                         </td>
 
 
                         <td>
-                            @x.RevenueValue
+                            @x.Password
                         </td>
 
 
-                        <td>
-                            @x.PrimaryContactName
-                        </td>
+                     
 
 
                         <td>
-                            <a href="~/Home/Delete/@x.AccountID">Delete Account </a>
-                            <a href="~/Home/AddNew/@x.AccountID">Edit Account </a>
+                            <a href="~/Admin/Delete/@x.UserId">Delete Account </a>
+                            <a href="~/Admin/AddNew/@x.UserId">Edit Account </a>
                         </td>
 
                     </tr>

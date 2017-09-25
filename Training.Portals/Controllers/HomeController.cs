@@ -5,17 +5,25 @@ using System.Web;
 using System.Web.Mvc;
 using Microsoft.Xrm.Sdk;
 using Training.Portals.Models;
+using Training.Portals.Repositories;
 using Training.Portals.Utils;
 
 namespace Training.Portals.Controllers
 {
     public class HomeController : Controller
     {
+        private UnitOfWork unitofwork;
+
+        public HomeController()
+        {
+            unitofwork=new UnitOfWork();          
+        }
+
         public ActionResult Index()
         {
             
-            CRMConnection con =new CRMConnection();
-            ViewBag.accountinfo=con.RetrieveEntities();
+            //CRMConnection con =new CRMConnection();
+            ViewBag.accountinfo=unitofwork.Accounts.RetreiveAll();
             return View();
         }
 
@@ -36,12 +44,9 @@ namespace Training.Portals.Controllers
         public ActionResult AddNew(string id)
 
         {
+            List<EntityReference> refUsers = unitofwork.Accounts.GetEntityReference();
 
-            CRMConnection objDAL = new CRMConnection();
-
-            List<EntityReference> refUsers = objDAL.GetEntityReference();
-
-            AccountEntityModels objAccountModel = new AccountEntityModels();
+            Account objAccountModel = new Account();
 
             Guid accountId = Guid.Empty;
 
@@ -57,7 +62,7 @@ namespace Training.Portals.Controllers
 
             {
 
-                objAccountModel = objDAL.GetCurrentRecord(accountId);
+                objAccountModel = unitofwork.Accounts.Get(accountId);
 
             }
 
@@ -76,26 +81,19 @@ namespace Training.Portals.Controllers
 
         [HttpPost]
 
-        public ActionResult AddNew(AccountEntityModels accountdmodel)
+        public ActionResult AddNew(Account accountdmodel)
 
         {
-
-            CRMConnection objDAL = new CRMConnection();
-
             Guid id = accountdmodel.AccountID;
 
-            objDAL.SaveAccount(accountdmodel);
+            unitofwork.Accounts.Update(accountdmodel);
 
             return Redirect("~/Home");
-
-            return View(accountdmodel);
-
         }
 
         public ActionResult Delete(Guid id)
         {
-            CRMConnection objDAL = new CRMConnection();
-            objDAL.DeleteRecord(id);
+            unitofwork.Accounts.Delete(id);
             return Redirect("~/Home");
         }
 

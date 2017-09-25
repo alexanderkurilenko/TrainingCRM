@@ -17,119 +17,154 @@ namespace Training.Portals.Utils
     {
         private IOrganizationService _orgService;
 
-        public List<AccountEntityModels> RetrieveEntities()
+        //public List<Account> RetrieveEntities()
+        //{
+        //    CrmServiceClient conn = new CrmServiceClient(GetServiceConfiguration());
+        //    _orgService = conn.OrganizationWebProxyClient != null ? (IOrganizationService)conn.OrganizationWebProxyClient : (IOrganizationService)conn.OrganizationServiceProxy;
+        //    Guid userid = ((WhoAmIResponse)_orgService.Execute(new WhoAmIRequest())).UserId;
+        //    QueryExpression query = new QueryExpression
+        //    {
+        //        EntityName = "account",
+        //        ColumnSet = new ColumnSet("accountid", "name", "revenue", "numberofemployees", "primarycontactid")
+        //    };
+        //    List<Account> info = new List<Account>();
+        //    EntityCollection accountRecord = _orgService.RetrieveMultiple(query);
+        //    if (accountRecord != null && accountRecord.Entities.Count > 0)
+        //    {
+        //        Account accountModel;
+        //        for (int i = 0; i < accountRecord.Entities.Count; i++)
+        //        {
+        //            accountModel = new Account();
+        //            if (accountRecord[i].Contains("accountid") && accountRecord[i]["accountid"] != null)
+        //                accountModel.AccountID = (Guid)accountRecord[i]["accountid"];
+        //            if (accountRecord[i].Contains("name") && accountRecord[i]["name"] != null)
+        //                accountModel.AccountName = accountRecord[i]["name"].ToString();
+        //            if (accountRecord[i].Contains("revenue") && accountRecord[i]["revenue"] != null)
+        //                accountModel.RevenueValue = ((Money)accountRecord[i]["revenue"]).Value;
+        //            if (accountRecord[i].Contains("numberofemployees") && accountRecord[i]["numberofemployees"] != null)
+        //                accountModel.NumberOfEmployees = (int)accountRecord[i]["numberofemployees"];
+        //            if (accountRecord[i].Contains("primarycontactid") && accountRecord[i]["primarycontactid"] != null)
+        //                accountModel.PrimaryContactName = ((EntityReference)accountRecord[i]["primarycontactid"]).Name;
+        //            info.Add(accountModel);
+        //        }
+        //    }
+        //    return info;
+        //}
+
+        public List<User> RetrieveUserEntities()
         {
             CrmServiceClient conn = new CrmServiceClient(GetServiceConfiguration());
             _orgService = conn.OrganizationWebProxyClient != null ? (IOrganizationService)conn.OrganizationWebProxyClient : (IOrganizationService)conn.OrganizationServiceProxy;
             Guid userid = ((WhoAmIResponse)_orgService.Execute(new WhoAmIRequest())).UserId;
             QueryExpression query = new QueryExpression
             {
-                EntityName = "account",
-                ColumnSet = new ColumnSet("accountid", "name", "revenue", "numberofemployees", "primarycontactid")
+                EntityName = "kurdev_portal_test",
+                ColumnSet = new ColumnSet("kurdev_portal_testid", "kurdev_login", "kurdev_password", "kurdev_name")
             };
-            List<AccountEntityModels> info = new List<AccountEntityModels>();
+            List<User> info = new List<User>();
             EntityCollection accountRecord = _orgService.RetrieveMultiple(query);
             if (accountRecord != null && accountRecord.Entities.Count > 0)
             {
-                AccountEntityModels accountModel;
+               User  accountModel;
                 for (int i = 0; i < accountRecord.Entities.Count; i++)
                 {
-                    accountModel = new AccountEntityModels();
-                    if (accountRecord[i].Contains("accountid") && accountRecord[i]["accountid"] != null)
-                        accountModel.AccountID = (Guid)accountRecord[i]["accountid"];
-                    if (accountRecord[i].Contains("name") && accountRecord[i]["name"] != null)
-                        accountModel.AccountName = accountRecord[i]["name"].ToString();
-                    if (accountRecord[i].Contains("revenue") && accountRecord[i]["revenue"] != null)
-                        accountModel.RevenueValue = ((Money)accountRecord[i]["revenue"]).Value;
-                    if (accountRecord[i].Contains("numberofemployees") && accountRecord[i]["numberofemployees"] != null)
-                        accountModel.NumberOfEmployees = (int)accountRecord[i]["numberofemployees"];
-                    if (accountRecord[i].Contains("primarycontactid") && accountRecord[i]["primarycontactid"] != null)
-                        accountModel.PrimaryContactName = ((EntityReference)accountRecord[i]["primarycontactid"]).Name;
+                    accountModel = new User();
+                    if (accountRecord[i].Contains("kurdev_portal_testid") && accountRecord[i]["kurdev_portal_testid"] != null)
+                        accountModel.UserId = (Guid)accountRecord[i]["kurdev_portal_testid"];
+
+                    if (accountRecord[i].Contains("kurdev_login") && accountRecord[i]["kurdev_login"] != null)
+                        accountModel.Login = accountRecord[i]["kurdev_login"].ToString();
+
+                    if (accountRecord[i].Contains("kurdev_password") && accountRecord[i]["kurdev_password"] != null)
+                        accountModel.Password = accountRecord[i]["kurdev_password"].ToString();
+
+                    if (accountRecord[i].Contains("kurdev_name") && accountRecord[i]["kurdev_name"] != null)
+                        accountModel.Name = accountRecord[i]["kurdev_name"].ToString();
                     info.Add(accountModel);
                 }
             }
             return info;
         }
 
-        public List<EntityReference> GetEntityReference()
-        {
-            try
-            {
-                List<EntityReference> info = new List<EntityReference>();
-                CrmServiceClient conn = new CrmServiceClient(GetServiceConfiguration());
-                _orgService = conn.OrganizationWebProxyClient != null
-                    ? (IOrganizationService) conn.OrganizationWebProxyClient
-                    : (IOrganizationService) conn.OrganizationServiceProxy;
-                QueryExpression query = new QueryExpression
-                {
-                    EntityName = "contact",
-                    ColumnSet = new ColumnSet("contactid", "fullname")
-                };
-                EntityCollection PrimaryContact = _orgService.RetrieveMultiple(query);
-                if (PrimaryContact != null && PrimaryContact.Entities.Count > 0)
-                {
-                    Microsoft.Xrm.Sdk.EntityReference itm;
-                    for (int i = 0; i < PrimaryContact.Entities.Count; i++)
-                    {
-                        itm = new EntityReference();
-                        if (PrimaryContact[i].Id != null)
-                            itm.Id = PrimaryContact[i].Id;
-                        if (PrimaryContact[i].Contains("fullname") && PrimaryContact[i]["fullname"] != null)
-                            itm.Name = PrimaryContact[i]["fullname"].ToString();
-                        itm.LogicalName = "contact";
-                        info.Add(itm);
-                    }
-                }
-                return info;
-            }
-            catch (Exception ex)
-            {
-                return null;
-            }
-        }
+        //public List<EntityReference> GetEntityReference()
+        //{
+        //    try
+        //    {
+        //        List<EntityReference> info = new List<EntityReference>();
+        //        CrmServiceClient conn = new CrmServiceClient(GetServiceConfiguration());
+        //        _orgService = conn.OrganizationWebProxyClient != null
+        //            ? (IOrganizationService) conn.OrganizationWebProxyClient
+        //            : (IOrganizationService) conn.OrganizationServiceProxy;
+        //        QueryExpression query = new QueryExpression
+        //        {
+        //            EntityName = "contact",
+        //            ColumnSet = new ColumnSet("contactid", "fullname")
+        //        };
+        //        EntityCollection PrimaryContact = _orgService.RetrieveMultiple(query);
+        //        if (PrimaryContact != null && PrimaryContact.Entities.Count > 0)
+        //        {
+        //            Microsoft.Xrm.Sdk.EntityReference itm;
+        //            for (int i = 0; i < PrimaryContact.Entities.Count; i++)
+        //            {
+        //                itm = new EntityReference();
+        //                if (PrimaryContact[i].Id != null)
+        //                    itm.Id = PrimaryContact[i].Id;
+        //                if (PrimaryContact[i].Contains("fullname") && PrimaryContact[i]["fullname"] != null)
+        //                    itm.Name = PrimaryContact[i]["fullname"].ToString();
+        //                itm.LogicalName = "contact";
+        //                info.Add(itm);
+        //            }
+        //        }
+        //        return info;
+        //    }
+        //    catch (Exception ex)
+        //    {
+        //        return null;
+        //    }
+        //}
 
-        public AccountEntityModels GetCurrentRecord(Guid accountId)
-        {
-            AccountEntityModels accountModel=new AccountEntityModels();
-            CrmServiceClient conn = new CrmServiceClient(GetServiceConfiguration());
-            _orgService = conn.OrganizationWebProxyClient != null ? (IOrganizationService)conn.OrganizationWebProxyClient : (IOrganizationService)conn.OrganizationServiceProxy;
-            ColumnSet cols = new ColumnSet(new String[] { "name", "revenue", "numberofemployees", "primarycontactid" });
-            Entity account = _orgService.Retrieve("account", accountId, cols);
-            accountModel.AccountID = accountId;
-            accountModel.AccountName = account.Attributes["name"].ToString();
-            accountModel.NumberOfEmployees = (int)account.Attributes["numberofemployees"];
-            accountModel.RevenueValue = ((Money)account.Attributes["revenue"]).Value;
-            accountModel.PrimaryContact = (EntityReference)account.Attributes["primarycontactid"];
-            return accountModel;
-        }
+        //public Account GetCurrentRecord(Guid accountId)
+        //{
+        //    Account accountModel=new Account();
+        //    CrmServiceClient conn = new CrmServiceClient(GetServiceConfiguration());
+        //    _orgService = conn.OrganizationWebProxyClient != null ? (IOrganizationService)conn.OrganizationWebProxyClient : (IOrganizationService)conn.OrganizationServiceProxy;
+        //    ColumnSet cols = new ColumnSet(new String[] { "name", "revenue", "numberofemployees", "primarycontactid" });
+        //    Entity account = _orgService.Retrieve("account", accountId, cols);
+        //    accountModel.AccountID = accountId;
+        //    accountModel.AccountName = account.Attributes["name"].ToString();
+        //    accountModel.NumberOfEmployees = (int)account.Attributes["numberofemployees"];
+        //    accountModel.RevenueValue = ((Money)account.Attributes["revenue"]).Value;
+        //    accountModel.PrimaryContact = (EntityReference)account.Attributes["primarycontactid"];
+        //    return accountModel;
+        //}
 
-        public void SaveAccount(AccountEntityModels objAccountModel)
-        {
-            CrmServiceClient conn = new CrmServiceClient(GetServiceConfiguration());
-            _orgService = conn.OrganizationWebProxyClient != null
-                ? (IOrganizationService) conn.OrganizationWebProxyClient
-                : (IOrganizationService) conn.OrganizationServiceProxy;
-            Entity AccountEntity = new Entity("account");
-            if (objAccountModel.AccountID != Guid.Empty)
-            {
-                AccountEntity["accountid"] = objAccountModel.AccountID;
-            }
-            AccountEntity["name"] = objAccountModel.AccountName;
-            AccountEntity["numberofemployees"] = objAccountModel.NumberOfEmployees;
-            AccountEntity["revenue"] = objAccountModel.Revenue;
-            AccountEntity["primarycontactid"] =
-                new Microsoft.Xrm.Sdk.EntityReference {Id = objAccountModel.PrimaryContact.Id, LogicalName = "account"};
+        //public void SaveAccount(Account objAccountModel)
+        //{
+        //    CrmServiceClient conn = new CrmServiceClient(GetServiceConfiguration());
+        //    _orgService = conn.OrganizationWebProxyClient != null
+        //        ? (IOrganizationService) conn.OrganizationWebProxyClient
+        //        : (IOrganizationService) conn.OrganizationServiceProxy;
+        //    Entity AccountEntity = new Entity("account");
+        //    if (objAccountModel.AccountID != Guid.Empty)
+        //    {
+        //        AccountEntity["accountid"] = objAccountModel.AccountID;
+        //    }
+        //    AccountEntity["name"] = objAccountModel.AccountName;
+        //    AccountEntity["numberofemployees"] = objAccountModel.NumberOfEmployees;
+        //    AccountEntity["revenue"] = objAccountModel.Revenue;
+        //    AccountEntity["primarycontactid"] =
+        //        new Microsoft.Xrm.Sdk.EntityReference {Id = objAccountModel.PrimaryContact.Id, LogicalName = "account"};
 
-            if (objAccountModel.AccountID == Guid.Empty)
-            {
-                objAccountModel.AccountID = _orgService.Create(AccountEntity);
-            }
-            else
-            {
-               _orgService.Update(AccountEntity);
+        //    if (objAccountModel.AccountID == Guid.Empty)
+        //    {
+        //        objAccountModel.AccountID = _orgService.Create(AccountEntity);
+        //    }
+        //    else
+        //    {
+        //       _orgService.Update(AccountEntity);
 
-            }
-        }
+        //    }
+        //}
 
         public void DeleteRecord(Guid id)
         {
