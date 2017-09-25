@@ -1,11 +1,13 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 15
-VisualStudioVersion = 15.0.26730.12
+VisualStudioVersion = 15.0.26730.16
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{262852C6-CD72-467D-83FE-5EEB1973A190}") = "WebResources", "WebResources\WebResources.jsproj", "{FFC4E048-B806-47C5-B89F-D643D7861EAF}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Training.Plugins", "Training.Plugins\Training.Plugins.csproj", "{B26BADC2-9B0E-47F1-98D6-1D33BD8A4238}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Training.Portals", "Training.Portals\Training.Portals.csproj", "{2A982C00-AC09-45CD-8257-D19828ACC369}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -59,6 +61,22 @@ Global
 		{B26BADC2-9B0E-47F1-98D6-1D33BD8A4238}.Release|x64.Build.0 = Release|Any CPU
 		{B26BADC2-9B0E-47F1-98D6-1D33BD8A4238}.Release|x86.ActiveCfg = Release|Any CPU
 		{B26BADC2-9B0E-47F1-98D6-1D33BD8A4238}.Release|x86.Build.0 = Release|Any CPU
+		{2A982C00-AC09-45CD-8257-D19828ACC369}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2A982C00-AC09-45CD-8257-D19828ACC369}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2A982C00-AC09-45CD-8257-D19828ACC369}.Debug|ARM.ActiveCfg = Debug|Any CPU
+		{2A982C00-AC09-45CD-8257-D19828ACC369}.Debug|ARM.Build.0 = Debug|Any CPU
+		{2A982C00-AC09-45CD-8257-D19828ACC369}.Debug|x64.ActiveCfg = Debug|Any CPU
+		{2A982C00-AC09-45CD-8257-D19828ACC369}.Debug|x64.Build.0 = Debug|Any CPU
+		{2A982C00-AC09-45CD-8257-D19828ACC369}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{2A982C00-AC09-45CD-8257-D19828ACC369}.Debug|x86.Build.0 = Debug|Any CPU
+		{2A982C00-AC09-45CD-8257-D19828ACC369}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2A982C00-AC09-45CD-8257-D19828ACC369}.Release|Any CPU.Build.0 = Release|Any CPU
+		{2A982C00-AC09-45CD-8257-D19828ACC369}.Release|ARM.ActiveCfg = Release|Any CPU
+		{2A982C00-AC09-45CD-8257-D19828ACC369}.Release|ARM.Build.0 = Release|Any CPU
+		{2A982C00-AC09-45CD-8257-D19828ACC369}.Release|x64.ActiveCfg = Release|Any CPU
+		{2A982C00-AC09-45CD-8257-D19828ACC369}.Release|x64.Build.0 = Release|Any CPU
+		{2A982C00-AC09-45CD-8257-D19828ACC369}.Release|x86.ActiveCfg = Release|Any CPU
+		{2A982C00-AC09-45CD-8257-D19828ACC369}.Release|x86.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
