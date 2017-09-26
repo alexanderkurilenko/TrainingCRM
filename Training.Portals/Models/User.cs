@@ -11,5 +11,6 @@ namespace Training.Portals.Models
         public string Password { get; set; }
         public string Name { get; set; }
         public Guid UserId { get; set; }
+        public Roles Role { get; set; }
     }
 }

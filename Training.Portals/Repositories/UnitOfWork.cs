@@ -13,6 +13,7 @@ namespace Training.Portals.Repositories
         private CrmServiceClient conn;
         private IOrganizationService _orgService;
         private AccountRepository accountRepository;
+        private UserRepository userRepository;
         private bool disposed = false;
 
         public UnitOfWork()
@@ -30,6 +31,18 @@ namespace Training.Portals.Repositories
                 if(accountRepository==null)
                     accountRepository=new AccountRepository(_orgService);
                 return accountRepository;
+            }
+        }
+
+        public UserRepository Users
+        {
+            get
+            {
+                if (userRepository == null)
+                {
+                    userRepository=new UserRepository(_orgService);
+                }
+                return userRepository;
             }
         }
 

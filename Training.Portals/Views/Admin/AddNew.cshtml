@@ -1,0 +1,85 @@
+﻿@model Training.Portals.Models.User
+
+
+@using (Html.BeginForm())
+{
+
+    <table>
+
+        <tr>
+
+            <td>
+
+                <table>
+
+                    <tr>
+
+                        <td width="150px"> Name</td>
+
+
+                        <td>
+                            @Html.HiddenFor(m => m.UserId)
+                            @Html.EditorFor(m => m.Name)
+                        </td>
+
+                    </tr>
+
+
+                    <tr>
+
+                        <td>Login</td>
+
+
+                        <td>
+                            @Html.EditorFor(m => m.Login)
+                        </td>
+
+                    </tr>
+
+
+                    <tr>
+
+                        <td width="150px">Password</td>
+
+
+                        <td>
+                            @Html.EditorFor(m => m.Password)
+                        </td>
+
+                    </tr>
+
+
+                    <tr>
+
+                        <td>Role</td>
+
+
+                        <td>
+                            @Html.EnumDropDownListFor(model => model.Role)
+                        </td>
+
+                    </tr>
+
+
+                    <tr>
+
+                        <td></td>
+
+
+                        <td>
+                            <input type="submit" value="Save" />
+
+                        </td>
+
+                        @Html.ActionLink("Back to List", "Index")
+                    </tr>
+
+                </table>
+
+            </td>
+
+        </tr>
+
+    </table>
+
+}

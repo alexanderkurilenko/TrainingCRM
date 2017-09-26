@@ -2,11 +2,11 @@
 @{
     ViewBag.Title = "Home Page";
 }
-<h1>@ViewBag.a</h1>
+<h1>@ViewBag.a.Role</h1>
 <table>
 
     <tr>
-        <a href="~/Home/AddNew">Add New </a>
+        <a href="~/Admin/AddNew">Add New </a>
     </tr>
 
 
@@ -34,10 +34,15 @@
 
                     <td width="80" align="center">
                         <a href="">
-                           Password
+                            Password
                         </a>
                     </td>
 
+                    <td width="80" align="center">
+                        <a href="">
+                            Role
+                        </a>
+                    </td>
 
                    
 
@@ -69,13 +74,14 @@
                         <td>
                             @x.Login
                         </td>
-
-
+                        
                         <td>
                             @x.Password
                         </td>
 
-
+                        <td>
+                            @x.Role
+                        </td>
                      
 
 

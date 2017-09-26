@@ -10,6 +10,7 @@ using Training.Portals.Utils;
 
 namespace Training.Portals.Controllers
 {
+    [Authorize]
     public class HomeController : Controller
     {
         private UnitOfWork unitofwork;
@@ -21,8 +22,7 @@ namespace Training.Portals.Controllers
 
         public ActionResult Index()
         {
-            
-            //CRMConnection con =new CRMConnection();
+         
             ViewBag.accountinfo=unitofwork.Accounts.RetreiveAll();
             return View();
         }
