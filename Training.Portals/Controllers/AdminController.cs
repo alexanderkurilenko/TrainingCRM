@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
+using System.Web.Helpers;
 using System.Web.Mvc;
 using Training.Portals.Models;
 using Training.Portals.Repositories;
@@ -9,7 +10,7 @@ using Training.Portals.Utils;
 
 namespace Training.Portals.Controllers
 {
-    [Authorize]
+    [Authorize(Roles = "Admin")]
     public class AdminController : Controller
     {
         private UnitOfWork unitofwork;
@@ -60,8 +61,9 @@ namespace Training.Portals.Controllers
         public ActionResult AddNew(User usermodel)
 
         {
+            var password = usermodel.Password;
             Guid id = usermodel.UserId;
-
+            usermodel.Password = Crypto.HashPassword(password);
             unitofwork.Users.Update(usermodel);
 
             return Redirect("~/Admin");

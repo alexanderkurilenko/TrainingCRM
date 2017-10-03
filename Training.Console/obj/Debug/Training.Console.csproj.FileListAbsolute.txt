@@ -1,0 +1,6 @@
+C:\Users\a.kurilenko\source\repos\TrainingCRM\Training.Console\bin\Debug\Training.Console.exe.config
+C:\Users\a.kurilenko\source\repos\TrainingCRM\Training.Console\bin\Debug\Training.Console.exe
+C:\Users\a.kurilenko\source\repos\TrainingCRM\Training.Console\bin\Debug\Training.Console.pdb
+C:\Users\a.kurilenko\source\repos\TrainingCRM\Training.Console\obj\Debug\Training.Console.csproj.CoreCompileInputs.cache
+C:\Users\a.kurilenko\source\repos\TrainingCRM\Training.Console\obj\Debug\Training.Console.exe
+C:\Users\a.kurilenko\source\repos\TrainingCRM\Training.Console\obj\Debug\Training.Console.pdb
