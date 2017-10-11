@@ -1,0 +1,6 @@
+C:\Users\a.kurilenko\source\repos\TrainingCRM\Training.Importer\bin\Debug\Training.Importer.dll
+C:\Users\a.kurilenko\source\repos\TrainingCRM\Training.Importer\bin\Debug\Training.Importer.pdb
+C:\Users\a.kurilenko\source\repos\TrainingCRM\Training.Importer\obj\Debug\Training.Importer.csprojResolveAssemblyReference.cache
+C:\Users\a.kurilenko\source\repos\TrainingCRM\Training.Importer\obj\Debug\Training.Importer.csproj.CoreCompileInputs.cache
+C:\Users\a.kurilenko\source\repos\TrainingCRM\Training.Importer\obj\Debug\Training.Importer.dll
+C:\Users\a.kurilenko\source\repos\TrainingCRM\Training.Importer\obj\Debug\Training.Importer.pdb

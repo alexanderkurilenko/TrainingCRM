@@ -4,4 +4,3 @@ C:\Users\a.kurilenko\source\repos\TrainingCRM\Training.Plugins\bin\Debug\Microso
 C:\Users\a.kurilenko\source\repos\TrainingCRM\Training.Plugins\obj\Debug\Training.Plugins.csproj.CoreCompileInputs.cache
 C:\Users\a.kurilenko\source\repos\TrainingCRM\Training.Plugins\obj\Debug\Training.Plugins.dll
 C:\Users\a.kurilenko\source\repos\TrainingCRM\Training.Plugins\obj\Debug\Training.Plugins.pdb
-C:\Users\a.kurilenko\source\repos\TrainingCRM\Training.Plugins\obj\Debug\Training.Plugins.csprojResolveAssemblyReference.cache
