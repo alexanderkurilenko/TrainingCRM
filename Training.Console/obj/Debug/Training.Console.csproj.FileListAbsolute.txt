@@ -21,3 +21,4 @@ C:\Users\a.kurilenko\source\repos\TrainingCRM\Training.Console\bin\Debug\Microso
 C:\Users\a.kurilenko\source\repos\TrainingCRM\Training.Console\bin\Debug\Microsoft.Xrm.Tooling.Connector.xml
 C:\Users\a.kurilenko\source\repos\TrainingCRM\Training.Console\bin\Debug\Microsoft.Xrm.Sdk.Deployment.xml
 C:\Users\a.kurilenko\source\repos\TrainingCRM\Training.Console\obj\Debug\Training.Console.csprojResolveAssemblyReference.cache
+C:\Users\a.kurilenko\source\repos\TrainingCRM\Training.Console\bin\Debug\System.IO.Compression.dll

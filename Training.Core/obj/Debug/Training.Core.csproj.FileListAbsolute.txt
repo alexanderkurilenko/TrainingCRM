@@ -30,3 +30,5 @@ C:\Users\a.kurilenko\source\repos\TrainingCRM\Training.Core\bin\Debug\Microsoft.
 C:\Users\a.kurilenko\source\repos\TrainingCRM\Training.Core\bin\Debug\Ninject.dll
 C:\Users\a.kurilenko\source\repos\TrainingCRM\Training.Core\bin\Debug\log4net.xml
 C:\Users\a.kurilenko\source\repos\TrainingCRM\Training.Core\bin\Debug\Ninject.xml
+C:\Users\a.kurilenko\source\repos\TrainingCRM\Training.Core\bin\Debug\System.IO.Compression.dll
+C:\Users\a.kurilenko\source\repos\TrainingCRM\Training.Core\bin\Debug\System.IO.Compression.ZipFile.dll

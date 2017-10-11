@@ -115,7 +115,11 @@
     <Compile Include="Util\Archives\ZipArchiveManager.cs" />
     <Compile Include="Util\Archives\ZipArchiveReader.cs" />
     <Compile Include="Util\Archives\ZipArchiveWriter.cs" />
+    <Compile Include="Util\FileSystem\FileSystem.cs" />
+    <Compile Include="Util\FileSystem\IFileSystem.cs" />
     <Compile Include="Util\LinqExtension.cs" />
+    <Compile Include="Util\SerializerUtil.cs" />
+    <Compile Include="Util\StreamUtil.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="app.config" />
