@@ -56,6 +56,10 @@
       <Project>{fce081ee-5320-4979-9257-bb852c7ed697}</Project>
       <Name>Training.Core</Name>
     </ProjectReference>
+    <ProjectReference Include="..\Training.Importer\Training.Importer.csproj">
+      <Project>{6dbc5e34-7c0e-409c-b249-2f465b37b2bc}</Project>
+      <Name>Training.Importer</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

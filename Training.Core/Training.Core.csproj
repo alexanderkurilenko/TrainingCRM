@@ -96,9 +96,9 @@
     <Compile Include="DataAccess\CrmConnectionConfig.cs" />
     <Compile Include="DataAccess\GenericDataAccess.cs" />
     <Compile Include="DataAccess\IOrganizationServiceContext.cs" />
-    <Compile Include="DataAccess\OrganizationServiceContext.cs" />
     <Compile Include="DataAccess\OrganizationServiceFactory.cs" />
     <Compile Include="DataAccess\PortalTestDataAccess.cs" />
+    <Compile Include="DataAccess\Query\FetchXmlQueryBuilder.cs" />
     <Compile Include="ImportType\ImportType.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Util\Archives\ArchiveManagerFactory.cs" />
@@ -115,6 +115,7 @@
     <Compile Include="Util\Archives\ZipArchiveManager.cs" />
     <Compile Include="Util\Archives\ZipArchiveReader.cs" />
     <Compile Include="Util\Archives\ZipArchiveWriter.cs" />
+    <Compile Include="Util\EntityCollectionExtension.cs" />
     <Compile Include="Util\FileSystem\FileSystem.cs" />
     <Compile Include="Util\FileSystem\IFileSystem.cs" />
     <Compile Include="Util\LinqExtension.cs" />

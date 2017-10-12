@@ -6,6 +6,7 @@ using System.Threading.Tasks;
 using Microsoft.Xrm.Sdk;
 using Microsoft.Xrm.Sdk.Client;
 using Ninject;
+using Training.Core.Util;
 
 namespace Training.Core.DataAccess
 {
@@ -14,6 +15,13 @@ namespace Training.Core.DataAccess
 
         public PortalTestDataAccess():base(new OrganizationServiceContext(new OrganizationServiceFactory().Create()))
         {
+        }
+
+        public IEnumerable<kurdev_portal_test> GetEntityByLogin(string login)
+        {
+            return (from c in service.CreateQuery<kurdev_portal_test>()
+                where c.kurdev_Login == login
+                    select  c).GetUniqueRecordsById();
         }
     }
 }

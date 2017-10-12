@@ -14,12 +14,12 @@ using Training.Core.Util;
 
 namespace Training.Core.DataAccess
 {
-    public class GenericDataAccess<T> where T : Entity
+    public class GenericDataAccess<T>:IDisposable where T : Entity
     {
         private readonly ILog logger = LogManager.GetLogger(typeof(GenericDataAccess<T>));
 
         //protected IOrganizationServiceContext service;
-        private OrganizationServiceContext service;
+        protected  OrganizationServiceContext service;
 
        
 
@@ -94,15 +94,16 @@ namespace Training.Core.DataAccess
 
         public void Update(T entity)
         {
+           // service.Detach(entity);
             try
             {
                 if (!service.IsAttached(entity))
                 {
                     service.Attach(entity);
                 }
-
                 service.UpdateObject(entity);
                 service.SaveChanges(SaveChangesOptions.None);
+               
             }
             catch (Exception)
             {
@@ -112,6 +113,7 @@ namespace Training.Core.DataAccess
                     service.Detach(entity);
                 }
 
+                
                 throw;
             }
         }
@@ -290,6 +292,12 @@ namespace Training.Core.DataAccess
             var assignRequest = new AssignRequest() { Assignee = owner, Target = entity.ToEntityReference() };
 
             service.Execute(assignRequest);
+        }
+
+        public void Dispose()
+        {
+            service.Dispose();
+            
         }
     }
 }
