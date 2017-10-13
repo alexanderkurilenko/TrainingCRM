@@ -36,8 +36,8 @@ namespace Training.Importer.ImportType.Models
 
         public PortalTest[] PortalTest
         {
-            get => this.PortalTest;
-            set => this.PortalTest = value;
+            get => this.portalTestField;
+            set => this.portalTestField = value;
         }
         public IEnumerable<PortalTest> Entities => PortalTest;
     }

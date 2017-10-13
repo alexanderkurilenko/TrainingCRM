@@ -26,7 +26,8 @@ namespace Training.Importer.RecordFinders
         public virtual kurdev_portal_test FindExistingRecord(PortalTest importEntity)
         {
             var res =portalTestDataAccess.GetEntityByLogin(importEntity.Login).FirstOrDefault();
-            portalTestDataAccess.Detach(res);
+            if(res!=null)
+                portalTestDataAccess.Detach(res);
             return res;
 
         }

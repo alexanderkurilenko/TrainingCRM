@@ -23,6 +23,7 @@ namespace Training.Importer.DataProccesor
         protected override kurdev_portal_test CreateNew(PortalTest importEntity)
         {
             var pt=new kurdev_portal_test();
+            Console.WriteLine(pt.Id);
             SetData(pt,importEntity);
             portalTestDataAccess.Create(pt);
             return pt;
@@ -38,6 +39,7 @@ namespace Training.Importer.DataProccesor
 
         private void SetData(kurdev_portal_test entity,PortalTest portalTest)
         {
+            
             entity.kurdev_Login = portalTest.Login;
             entity.kurdev_Role = new OptionSetValue((int) portalTest.Role);
             entity.kurdev_name = portalTest.Name;

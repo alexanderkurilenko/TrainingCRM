@@ -30,8 +30,10 @@ namespace Training.Importer.DataProccesor
 
         protected internal override TCrmEntity Import(TImportEntity importEntity)
         {
+           Console.WriteLine("lol");
             if (!PreImportCheck(importEntity))
             {
+                Console.WriteLine("lol");
                 return null;
             }
 

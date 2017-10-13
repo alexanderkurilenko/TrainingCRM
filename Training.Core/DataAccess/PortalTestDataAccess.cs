@@ -21,7 +21,7 @@ namespace Training.Core.DataAccess
         {
             return (from c in service.CreateQuery<kurdev_portal_test>()
                 where c.kurdev_Login == login
-                    select  c).GetUniqueRecordsById();
+                select c);
         }
     }
 }

@@ -1,0 +1,12 @@
+<?xml version="1.0"?>
+<PortalTests xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <PortalTest>
+    <PortalTest>
+      <Login>1234</Login>
+      <Password>8f4</Password>
+      <Name>topchicktopchicktopchick</Name>
+      <UserId>d539dda8-47af-e711-b87e-60a44c7256ed</UserId>
+      <Role>Admin</Role>
+    </PortalTest>
+  </PortalTest>
+</PortalTests>

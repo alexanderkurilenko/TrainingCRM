@@ -30,5 +30,10 @@ namespace Training.Importer.DataProccesor
         }
 
         protected internal abstract TCrmEntity Import(TImportEntity entity);
+
+        public static implicit operator ImportDataProcessor<TImportEntity, TCrmEntity>(PortalTestDataProcessor v)
+        {
+            throw new NotImplementedException();
+        }
     }
 }
