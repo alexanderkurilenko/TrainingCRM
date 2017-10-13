@@ -110,11 +110,13 @@ namespace Training.Importer.Infrastructure
 
         private void UnpackZipArchives()
         {
-            var zipArchives = fileSystem.GetFiles(importFolderConfiguration.ZippedFolder).Where(DoneFileExistsForImportFile);
-
+            var zipArchives = fileSystem.GetFiles(importFolderConfiguration.ZippedFolder);
+            Console.WriteLine(zipArchives.Count());
             foreach (var zipArchive in zipArchives)
             {
+                Console.WriteLine(zipArchive);
                 var archiveManager = archiveManagerFactory.GetArchiveManagerForFile(zipArchive);
+               
                 using (var archive = archiveManager.GetArchiveReader(fileSystem.OpenRead(zipArchive), zipArchive))
                 {
                     foreach (var archiveEntry in archive.GetTopLevelEntries())
@@ -131,7 +133,7 @@ namespace Training.Importer.Infrastructure
         private void UnpackArchiveEntry(IArchiveEntry archiveEntry, string zipArchiveName)
         {
             var outputPath = Path.Combine(importFolderConfiguration.InitialFolder, archiveEntry.Name);
-
+            Console.WriteLine(outputPath);
             try
             {
                 using (var outputStream = fileSystem.OpenWrite(outputPath))
@@ -145,7 +147,7 @@ namespace Training.Importer.Infrastructure
             }
             catch (Exception exception)
             {
-                logger.Error(string.Format("Error during archive entry unpack. Archive {0}, entry{1}", zipArchiveName,
+                Console.WriteLine(string.Format("Error during archive entry unpack. Archive {0}, entry{1}", zipArchiveName,
                     archiveEntry.Name), exception);
             }
         }
