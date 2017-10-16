@@ -15,9 +15,9 @@ namespace Training.Importer.DataProccesor
     {
         private readonly PortalTestDataAccess portalTestDataAccess;
 
-        public PortalTestDataProcessor():base(new PortalTestRecordFinder(), new AlwaysTrueUpdateRuleChecker<PortalTest,kurdev_portal_test>())
+        public PortalTestDataProcessor(PortalTestDataAccess _portalTestDataAccess) :base(new PortalTestRecordFinder(_portalTestDataAccess), new AlwaysTrueUpdateRuleChecker<PortalTest,kurdev_portal_test>())
         {
-            portalTestDataAccess=new PortalTestDataAccess();
+            portalTestDataAccess=_portalTestDataAccess;
         }
 
         protected override kurdev_portal_test CreateNew(PortalTest importEntity)

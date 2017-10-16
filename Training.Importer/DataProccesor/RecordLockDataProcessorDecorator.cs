@@ -24,9 +24,9 @@ namespace Training.Importer.DataProccesor
         private readonly ILog logger = LogManager.GetLogger(typeof(IImportDataProcessor));
 
         [Inject]
-        public RecordLockDataProcessorDecorator()
+        public RecordLockDataProcessorDecorator(ImportDataProcessor<TImportEntity, TCrmEntity> _dataProcessor)
         {
-            this.dataProcessor = new PortalTestDataProcessor();
+            this.dataProcessor = _dataProcessor;
         }
 
         protected internal override TCrmEntity Import(TImportEntity entity)

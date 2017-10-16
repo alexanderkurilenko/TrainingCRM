@@ -99,6 +99,9 @@
     <Compile Include="Infrastructure\ImportFileSystem.cs" />
     <Compile Include="Infrastructure\LockWithRefCounter.cs" />
     <Compile Include="Infrastructure\RecordLockDictionary.cs" />
+    <Compile Include="Ninject\DataAccessModule.cs" />
+    <Compile Include="Ninject\DataProcessorModule.cs" />
+    <Compile Include="Ninject\InfrastructureModule.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="RecordFinders\IDeletionRecordFinder.cs" />
     <Compile Include="RecordFinders\IExistingRecordFinder.cs" />

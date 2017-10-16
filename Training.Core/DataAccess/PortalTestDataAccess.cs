@@ -12,8 +12,8 @@ namespace Training.Core.DataAccess
 {
     public class PortalTestDataAccess:GenericDataAccess<kurdev_portal_test>
     {
-
-        public PortalTestDataAccess():base(new OrganizationServiceContext(new OrganizationServiceFactory().Create()))
+        [Inject]
+        public PortalTestDataAccess(OrganizationServiceContext service) :base(service)
         {
         }
 

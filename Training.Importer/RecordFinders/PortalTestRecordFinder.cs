@@ -13,9 +13,9 @@ namespace Training.Importer.RecordFinders
     {
         protected readonly PortalTestDataAccess portalTestDataAccess;
 
-        public PortalTestRecordFinder()
+        public PortalTestRecordFinder(PortalTestDataAccess _portalTestDataAccess)
         {
-            this.portalTestDataAccess =new PortalTestDataAccess();
+            this.portalTestDataAccess =_portalTestDataAccess;
         }
 
         public void Dispose()

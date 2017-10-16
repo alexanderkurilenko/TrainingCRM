@@ -22,7 +22,7 @@ namespace Training.Core.DataAccess
         protected  OrganizationServiceContext service;
 
        
-
+        [Inject]
         public GenericDataAccess(OrganizationServiceContext  serv)
         {
             this.service =serv;

@@ -1,7 +1,7 @@
 <?xml version="1.0"?>
-<PortalTests xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
-  <PortalTest>
-    <PortalTest>
+<Test xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <Role>User</Role>
+</Test>PortalTest>
       <Login>1234</Login>
       <Password>8f4</Password>
       <Name>topchicktopchicktopchick</Name>

@@ -162,16 +162,16 @@ namespace Training.Importer
             out int successRecordsCount)
         {
            
-            var processor = new PortalTestDataProcessor();
-           
+            var processor = importDataProcessorFactory.GetImportDataProcessor(entities.ElementAt(0));
+
             successRecordsCount = 0;
             failedRecordsCount = 0;
-            //Console.WriteLine("in proceessColl try");
+         
             for (int index = 0; index < entities.Count; ++index)
             {
                 try
                 {
-                    Console.WriteLine("in proceessColl try");
+                   
                     processor.ProcessEntity(entities[index]);
                     successRecordsCount++;
                 }
