@@ -6,64 +6,20 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using Training.Importer.ImportType;
+using Training.Importer.ImportType.Models;
 
 namespace Training.Importer.Mappers
 {
-    public class MapperBase<TImportEntity,TCrmEntity>:IMapper
-        where TImportEntity:ImportEntity 
-        where TCrmEntity:Entity
+    public static class MapperBase      
     {
-        public IConfigurationProvider ConfigurationProvider => throw new NotImplementedException();
-
-        public Func<Type, object> ServiceCtor => throw new NotImplementedException();
-
-
-
-        public virtual TCrmEntity Map<TCrmEntity>(object source) => Mapper.Map<TCrmEntity>(source);
-
-        public virtual TCrmEntity Map<TCrmEntity>(object source, Action<IMappingOperationOptions> opts)
+       public static void GetMappers()
         {
-            throw new NotImplementedException();
-        }
-
-        public virtual TCrmEntity Map<TImportEntity, TCrmEntity>(TImportEntity source)
-        {
-            throw new NotImplementedException();
-        }
-
-        public virtual TCrmEntity Map<TImportEntity, TCrmEntity>(TImportEntity source, Action<IMappingOperationOptions<TImportEntity, TCrmEntity>> opts)
-        {
-            throw new NotImplementedException();
-        }
-
-        public virtual TCrmEntity Map<TImportEntity, TCrmEntity>(TImportEntity source, TCrmEntity destination)
-        {
-            throw new NotImplementedException();
-        }
-
-        public virtual TCrmEntity Map<TImportEntity, TCrmEntity>(TImportEntity source, TCrmEntity destination, Action<IMappingOperationOptions<TImportEntity, TCrmEntity>> opts)
-        {
-            throw new NotImplementedException();
-        }
-
-        public virtual object Map(object source, Type sourceType, Type destinationType)
-        {
-            throw new NotImplementedException();
-        }
-
-        public virtual object Map(object source, Type sourceType, Type destinationType, Action<IMappingOperationOptions> opts)
-        {
-            throw new NotImplementedException();
-        }
-
-        public virtual object Map(object source, object destination, Type sourceType, Type destinationType)
-        {
-            throw new NotImplementedException();
-        }
-
-        public virtual object Map(object source, object destination, Type sourceType, Type destinationType, Action<IMappingOperationOptions> opts)
-        {
-            throw new NotImplementedException();
+            Mapper.Initialize(cfg => cfg.CreateMap<PortalTest, kurdev_portal_test>()
+           .ForMember("kurdev_Login", opt => opt.MapFrom(c => c.Login))
+           .ForMember("kurdev_name", opt => opt.MapFrom(c => c.Name))
+           .ForMember("kurdev_PassWord", opt => opt.MapFrom(c => c.Password))
+           .ForMember("kurdev_Role", opt => opt.MapFrom(c => new OptionSetValue((int)c.Role)))
+           .ForMember("kurdev_portal_testId", opt => opt.MapFrom(c => c.UserId == Guid.Empty ? Guid.NewGuid() : c.UserId)));
         }
     }
 }

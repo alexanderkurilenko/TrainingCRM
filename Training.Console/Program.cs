@@ -45,7 +45,7 @@ namespace Training.Console
             //var managers = new List<IArchiveManager>();
             //var zip=new ZipArchiveManager();
             //var gzip=new GZipArchiveManager();
-           
+
             //managers.Add(zip);
             //managers.Add(gzip);
 
@@ -70,6 +70,7 @@ namespace Training.Console
             //man.RunImportIteration();
 
             // a.Update(b);
+            log4net.Config.XmlConfigurator.Configure();
             var kernel = new StandardKernel(new Importer.Ninject.DataAccessModule(),new InfrastructureModule(),new DataProcessorModule());
             var importmanager = kernel.Get<ImportManager>();
             importmanager.RunImportIteration();
