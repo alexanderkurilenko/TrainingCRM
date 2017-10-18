@@ -1,0 +1,9 @@
+C:\Users\a.kurilenko\source\repos\TrainingCRM\ImporterServiceBase\bin\Debug\ImporterServiceBase.exe.config
+C:\Users\a.kurilenko\source\repos\TrainingCRM\ImporterServiceBase\bin\Debug\ImporterServiceBase.exe
+C:\Users\a.kurilenko\source\repos\TrainingCRM\ImporterServiceBase\bin\Debug\ImporterServiceBase.pdb
+C:\Users\a.kurilenko\source\repos\TrainingCRM\ImporterServiceBase\bin\Debug\log4net.dll
+C:\Users\a.kurilenko\source\repos\TrainingCRM\ImporterServiceBase\bin\Debug\log4net.xml
+C:\Users\a.kurilenko\source\repos\TrainingCRM\ImporterServiceBase\obj\Debug\ImporterServiceBase.csprojResolveAssemblyReference.cache
+C:\Users\a.kurilenko\source\repos\TrainingCRM\ImporterServiceBase\obj\Debug\ImporterServiceBase.csproj.CoreCompileInputs.cache
+C:\Users\a.kurilenko\source\repos\TrainingCRM\ImporterServiceBase\obj\Debug\ImporterServiceBase.exe
+C:\Users\a.kurilenko\source\repos\TrainingCRM\ImporterServiceBase\obj\Debug\ImporterServiceBase.pdb

@@ -25,3 +25,5 @@ C:\Users\a.kurilenko\source\repos\TrainingCRM\Training.Console\bin\Debug\System.
 C:\Users\a.kurilenko\source\repos\TrainingCRM\Training.Console\bin\Debug\Training.Importer.dll
 C:\Users\a.kurilenko\source\repos\TrainingCRM\Training.Console\bin\Debug\Training.Importer.pdb
 C:\Users\a.kurilenko\source\repos\TrainingCRM\Training.Console\bin\Debug\Training.Importer.dll.config
+C:\Users\a.kurilenko\source\repos\TrainingCRM\Training.Console\bin\Debug\AutoMapper.dll
+C:\Users\a.kurilenko\source\repos\TrainingCRM\Training.Console\bin\Debug\AutoMapper.xml

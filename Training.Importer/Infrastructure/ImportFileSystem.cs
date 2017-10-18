@@ -41,7 +41,7 @@ namespace Training.Importer.Infrastructure
             var files = fileSystem.GetFiles(importFolderConfiguration.ProcessingFolder, importFileSearchOption).ToList();
             // .Where(file => !capturedFiles.Contains(file)).ToList();
 
-            files.AddRange(fileSystem.GetFiles(importFolderConfiguration.InitialFolder).Where(DoneFileExistsForImportFile));
+            files.AddRange(fileSystem.GetFiles(importFolderConfiguration.InitialFolder));
 
             if (files.Any())
             {
@@ -49,7 +49,7 @@ namespace Training.Importer.Infrastructure
             }
 
             UnpackZipArchives();
-            files = fileSystem.GetFiles(importFolderConfiguration.InitialFolder).Where(DoneFileExistsForImportFile).ToList();
+            files = fileSystem.GetFiles(importFolderConfiguration.InitialFolder).ToList();
 
             return files;
         }
@@ -63,9 +63,9 @@ namespace Training.Importer.Infrastructure
                 fileSystem.CopyFile(filePath, movedFilePath);
                 fileSystem.DeleteFile(filePath);
 
-                fileSystem.CopyFile(Path.ChangeExtension(filePath, doneFileExtension),
-                    Path.ChangeExtension(movedFilePath, doneFileExtension));
-                fileSystem.DeleteFile(Path.ChangeExtension(filePath, doneFileExtension));
+                //fileSystem.CopyFile(Path.ChangeExtension(filePath, doneFileExtension),
+                    //Path.ChangeExtension(movedFilePath, doneFileExtension));
+                //fileSystem.DeleteFile(Path.ChangeExtension(filePath, doneFileExtension));
             }
 
             initialToProcessingPathMapping.TryAdd(filePath, movedFilePath);
@@ -163,7 +163,7 @@ namespace Training.Importer.Infrastructure
         {
             var processingFilePath = initialToProcessingPathMapping[initialFilePath];
 
-            // capturedFiles.Remove(processingFilePath);
+           // capturedFiles.Remove(processingFilePath);
 
             fileSystem.MoveFile(processingFilePath, Path.Combine(folder, Path.GetFileName(processingFilePath)), true);
 

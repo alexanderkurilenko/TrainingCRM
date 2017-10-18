@@ -30,6 +30,7 @@ namespace Training.Importer.DataProccesor
                 
                 return kernel.Get<RecordLockDataProcessorDecorator<PortalTest, kurdev_portal_test>>();
             }
+            
             return null;
         }
     }

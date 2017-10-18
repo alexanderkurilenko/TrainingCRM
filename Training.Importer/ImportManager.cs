@@ -48,6 +48,7 @@ namespace Training.Importer
             }
 
             var files = filesProvider.GetFiles().OrderByDescending(file => file);
+            Console.WriteLine(files.Count());
             List<KeyValuePair<string, string>> notTakenFiles;
 
             lock (takenFiles)
@@ -79,6 +80,7 @@ namespace Training.Importer
                 Console.WriteLine("The fatal error occurs during file {0} processing. Error: {1}. {2}",
                     Path.GetFileName(fileName), ex.InnerException != null ? ex.InnerException.Message : ex.Message,
                     ex.StackTrace);
+                throw;
             }
             finally
             {
@@ -105,9 +107,7 @@ namespace Training.Importer
                 using (var stream = filesProvider.GetFile(fileName))
                 {
                     var serializer = serializerFactory.GetDeserializer(stream);
-
-
-
+                   
                     stream.Seek(0, SeekOrigin.Begin);
                     Console.WriteLine(serializer.AcceptedClass);
                     var entities = serializer.Deserialize(stream).ToList();

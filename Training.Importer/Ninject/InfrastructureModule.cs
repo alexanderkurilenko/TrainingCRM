@@ -20,7 +20,7 @@ namespace Training.Importer.Ninject
         {
             Bind<ImportFolderConfiguration>().ToMethod<ImportFolderConfiguration>(context => new ImportFolderConfiguration
             {
-                InitialFolder = @"D:\Test",
+                InitialFolder = @"D:\Test\Initial",
                 FailedFolder = @"D:\Test\Failed",
                 ProcessingFolder = @"D:\Test\Processing",
                 SucceedFolder = @"D:\Test\Succeed",
@@ -37,6 +37,7 @@ namespace Training.Importer.Ninject
             Bind<IImportDeserializerFactory>().To<NinjectXmlDeserializerFactory>();
             Bind<IImportDataProcessorFactory>().To<ImportDataProcessorFactory>();
             Bind<IImportDeserializer>().To<GenericXmlImportDeserializer<PortalTests,PortalTest>>();
+            Bind<IImportDeserializer>().To<GenericXmlImportDeserializer<Users, User>>();
 
             Bind<IKernel>().ToMethod(context => context.Kernel).WhenInjectedInto<ImportDataProcessorFactory>();
 

@@ -100,7 +100,6 @@
     <Compile Include="DataAccess\PortalTestDataAccess.cs" />
     <Compile Include="DataAccess\Query\FetchXmlQueryBuilder.cs" />
     <Compile Include="ImportType\ImportType.cs" />
-    <Compile Include="Ninject\DataAccessModule.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Util\Archives\ArchiveManagerFactory.cs" />
     <Compile Include="Util\Archives\ArchiveWriterMode.cs" />

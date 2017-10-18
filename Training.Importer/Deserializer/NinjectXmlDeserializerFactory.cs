@@ -28,6 +28,7 @@ namespace Training.Importer.Deserializer
         public IImportDeserializer GetDeserializer(Stream stream)
         {
             var doc = new XmlDocument();
+            Console.WriteLine(doc.FirstChild);
             doc.Load(stream);
 
             if (doc.DocumentElement != null && serializerMapping.ContainsKey(doc.DocumentElement.FirstChild.Name))

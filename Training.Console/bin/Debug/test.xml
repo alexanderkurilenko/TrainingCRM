@@ -1,12 +1,7 @@
 <?xml version="1.0"?>
-<Test xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
-  <Role>User</Role>
-</Test>PortalTest>
-      <Login>1234</Login>
-      <Password>8f4</Password>
-      <Name>topchicktopchicktopchick</Name>
-      <UserId>d539dda8-47af-e711-b87e-60a44c7256ed</UserId>
-      <Role>Admin</Role>
-    </PortalTest>
-  </PortalTest>
-</PortalTests>
+<User xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <Id>00000000-0000-0000-0000-000000000000</Id>
+  <Name>f</Name>
+  <Age>19</Age>
+  <Hobby>d</Hobby>
+</User>

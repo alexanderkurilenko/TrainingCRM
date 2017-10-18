@@ -15,45 +15,20 @@ using Training.Importer.Deserializer;
 using Training.Importer.ImportType.Models;
 using Training.Importer.Infrastructure;
 using Ninject;
-using Training.Core.Ninject;
+
 using Training.Importer.Ninject;
 
 namespace Training.Console
 {
-    public enum A
-    {
-        User,
-        Admin
-    }
-    [Serializable]
-    public class Test
-    {
-        public A Role { get; set; }
-    }
+    
     class Program
     {
         static void Main(string[] args)
         {
-            //var a = new PortalTestDataProcessor();
-            //var g=new PortalTestDataAccess();
-            kurdev_portal_test b=new kurdev_portal_test();
-            b.Id= new Guid("d539dda8-47af-e711-b87e-60a44c7256ed");
-            b.kurdev_Login = "1234";
-            b.kurdev_PassWord = "topchick";
-            b.kurdev_name = "123525";
-            PortalTests tests=new PortalTests();
-            PortalTest d=new PortalTest();
-            //d.UserId = new Guid("d539dda8-47af-e711-b87e-60a44c7256ed");
-            d.UserId = new Guid("d539dda8-47af-e711-b87e-60a44c7256ed");
-            d.Login = "1234";
-            d.Password = "8f4";
-            d.Name = "topchicktopchicktopchick";
-            d.Role = Roles.Admin;
-            PortalTest[] arr = { d };
-            tests.PortalTest = arr;
+            
 
-            XmlSerializer formatter = new XmlSerializer(typeof(Test));
-            Test test = new Test();
+            XmlSerializer formatter = new XmlSerializer(typeof(User));
+            User test = new User() { Name="f",Age=19,Hobby="d"};
             // получаем поток, куда будем записывать сериализованный объект
             using (FileStream fs = new FileStream("test.xml", FileMode.OpenOrCreate))
             {

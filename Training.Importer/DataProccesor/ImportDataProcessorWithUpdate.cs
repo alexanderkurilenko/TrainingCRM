@@ -47,7 +47,7 @@ namespace Training.Importer.DataProccesor
             }
             else if (updateRuleChecker.EntityHaveToBeUpdated(importEntity, crmEntity))
             {
-                logger.InfoFormat(
+                Console.WriteLine(
                     "Existing record was found. {0} record with Crm Id = {1} will be updated.",
                     crmEntity.LogicalName,
                     crmEntity.Id);

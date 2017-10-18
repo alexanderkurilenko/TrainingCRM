@@ -31,3 +31,5 @@ C:\Users\a.kurilenko\source\repos\TrainingCRM\Training.Importer\bin\Debug\Traini
 C:\Users\a.kurilenko\source\repos\TrainingCRM\Training.Importer\bin\Debug\System.IO.Compression.dll
 C:\Users\a.kurilenko\source\repos\TrainingCRM\Training.Importer\bin\Debug\Training.Core.pdb
 C:\Users\a.kurilenko\source\repos\TrainingCRM\Training.Importer\bin\Debug\Training.Core.dll.config
+C:\Users\a.kurilenko\source\repos\TrainingCRM\Training.Importer\bin\Debug\AutoMapper.dll
+C:\Users\a.kurilenko\source\repos\TrainingCRM\Training.Importer\bin\Debug\AutoMapper.xml

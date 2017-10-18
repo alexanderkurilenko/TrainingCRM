@@ -38,6 +38,7 @@ namespace Training.Core.Util.FileSystem
 
         public void DeleteFile(string filePath)
         {
+
             File.Delete(filePath);
         }
 

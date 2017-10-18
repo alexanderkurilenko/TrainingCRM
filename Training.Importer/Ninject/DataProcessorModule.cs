@@ -13,8 +13,8 @@ namespace Training.Importer.Ninject
     {
         public override void Load()
         {
-            Bind<IImportDataProcessor>().To<PortalTestDataProcessor>();
-            Bind<ImportDataProcessor<PortalTest, kurdev_portal_test>>().To<PortalTestDataProcessor>();
+            //Bind<IImportDataProcessor>().To<PortalTestDataProcessor>().Named("PortalTest");
+            //Bind<ImportDataProcessor<PortalTest, kurdev_portal_test>>().To<PortalTestDataProcessor>();
             Bind<ImportDataProcessor<PortalTest, kurdev_portal_test>>().To<PortalTestDataProcessor>()
                    .WhenInjectedExactlyInto<RecordLockDataProcessorDecorator<PortalTest, kurdev_portal_test>>();
         }
