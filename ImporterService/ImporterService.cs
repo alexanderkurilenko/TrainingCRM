@@ -35,8 +35,9 @@ namespace ImporterService
         public override void Execute()
         {
 
-                timer.Change(Interval, Timeout.Infinite);
-                importManager.RunImportIteration();
+            logger.Info("starting timer");
+            timer.Change(Interval, Timeout.Infinite);
+            importManager.RunImportIteration();
            
         }
 

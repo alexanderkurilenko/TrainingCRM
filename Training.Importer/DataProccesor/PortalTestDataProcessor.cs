@@ -36,10 +36,23 @@ namespace Training.Importer.DataProccesor
 
         protected override kurdev_portal_test UpdateExisting(kurdev_portal_test crmEntity, PortalTest importEntity)
         {
-            SetData(ref crmEntity, importEntity);
+            SetDataForUpdate(ref crmEntity, importEntity,crmEntity.Id);
             portalTestDataAccess.Detach(crmEntity);
             portalTestDataAccess.Update(crmEntity);
             return crmEntity;
+        }
+
+        private void SetDataForUpdate(ref kurdev_portal_test crmEntity, PortalTest importEntity, Guid id)
+        {
+            var tmp = importEntity;
+            if (importEntity.UserId == Guid.Empty)
+            {
+                tmp.UserId = crmEntity.Id;
+            }
+            Console.WriteLine(tmp.UserId);
+            Console.WriteLine(tmp.Login);
+            MapperBase.GetMappers();
+            crmEntity = Mapper.Map<PortalTest, kurdev_portal_test>(tmp);
         }
 
         private void SetData(  ref kurdev_portal_test entity,PortalTest portalTest)

@@ -103,7 +103,7 @@
     <Compile Include="Infrastructure\ImportFileSystem.cs" />
     <Compile Include="Infrastructure\LockWithRefCounter.cs" />
     <Compile Include="Infrastructure\RecordLockDictionary.cs" />
-    <Compile Include="Mappers\MapperFactory.cs" />
+    <Compile Include="Mappers\MapperBase.cs" />
     <Compile Include="Ninject\DataAccessModule.cs" />
     <Compile Include="Ninject\DataProcessorModule.cs" />
     <Compile Include="Ninject\InfrastructureModule.cs" />

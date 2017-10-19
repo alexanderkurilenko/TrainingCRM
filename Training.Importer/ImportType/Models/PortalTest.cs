@@ -15,13 +15,14 @@ namespace Training.Importer.ImportType.Models
     [Serializable]
     public class PortalTest:ImportEntity,ILockable
     {
+        public readonly Guid InnerGuid=Guid.NewGuid();
         public string Login { get; set; }
         public string Password { get; set; }
         public string Name { get; set; }
         public Guid UserId { get; set; }
         public Roles Role { get; set; }
-
-        public string UniqueIdentifier => (UserId + "!!" + Login).ToUpper();
+        public const string EntityName = "PortalTest";
+        public string UniqueIdentifier => (InnerGuid + "!!" + EntityName).ToUpper();
 
         public override string MainFieldsMessage
         {

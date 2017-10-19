@@ -32,3 +32,108 @@ Affected parameters are:
    logtoconsole = 
    assemblypath = C:\Users\a.kurilenko\source\repos\TrainingCRM\ImporterService\bin\Debug\ImporterService.exe
    logfile = C:\Users\a.kurilenko\source\repos\TrainingCRM\ImporterService\bin\Debug\ImporterService.InstallLog
+Uninstalling assembly 'C:\Users\a.kurilenko\source\repos\TrainingCRM\ImporterService\bin\Debug\ImporterService.exe'.
+Affected parameters are:
+   logtoconsole = 
+   assemblypath = C:\Users\a.kurilenko\source\repos\TrainingCRM\ImporterService\bin\Debug\ImporterService.exe
+   logfile = C:\Users\a.kurilenko\source\repos\TrainingCRM\ImporterService\bin\Debug\ImporterService.InstallLog
+Removing EventLog source ImporterService.
+Service ImporterService is being removed from the system...
+Service ImporterService was successfully removed from the system.
+Installing assembly 'C:\Users\a.kurilenko\source\repos\TrainingCRM\ImporterService\bin\Debug\ImporterService.exe'.
+Affected parameters are:
+   logtoconsole = 
+   assemblypath = C:\Users\a.kurilenko\source\repos\TrainingCRM\ImporterService\bin\Debug\ImporterService.exe
+   logfile = C:\Users\a.kurilenko\source\repos\TrainingCRM\ImporterService\bin\Debug\ImporterService.InstallLog
+Installing service ImporterService...
+Service ImporterService has been successfully installed.
+Creating EventLog source ImporterService in log Application...
+Committing assembly 'C:\Users\a.kurilenko\source\repos\TrainingCRM\ImporterService\bin\Debug\ImporterService.exe'.
+Affected parameters are:
+   logtoconsole = 
+   assemblypath = C:\Users\a.kurilenko\source\repos\TrainingCRM\ImporterService\bin\Debug\ImporterService.exe
+   logfile = C:\Users\a.kurilenko\source\repos\TrainingCRM\ImporterService\bin\Debug\ImporterService.InstallLog
+Uninstalling assembly 'C:\Users\a.kurilenko\source\repos\TrainingCRM\ImporterService\bin\Debug\ImporterService.exe'.
+Affected parameters are:
+   logtoconsole = 
+   assemblypath = C:\Users\a.kurilenko\source\repos\TrainingCRM\ImporterService\bin\Debug\ImporterService.exe
+   logfile = C:\Users\a.kurilenko\source\repos\TrainingCRM\ImporterService\bin\Debug\ImporterService.InstallLog
+Removing EventLog source ImporterService.
+Service ImporterService is being removed from the system...
+Service ImporterService was successfully removed from the system.
+Installing assembly 'C:\Users\a.kurilenko\source\repos\TrainingCRM\ImporterService\bin\Debug\ImporterService.exe'.
+Affected parameters are:
+   logtoconsole = 
+   assemblypath = C:\Users\a.kurilenko\source\repos\TrainingCRM\ImporterService\bin\Debug\ImporterService.exe
+   logfile = C:\Users\a.kurilenko\source\repos\TrainingCRM\ImporterService\bin\Debug\ImporterService.InstallLog
+Installing service ImporterService...
+Service ImporterService has been successfully installed.
+Creating EventLog source ImporterService in log Application...
+Committing assembly 'C:\Users\a.kurilenko\source\repos\TrainingCRM\ImporterService\bin\Debug\ImporterService.exe'.
+Affected parameters are:
+   logtoconsole = 
+   assemblypath = C:\Users\a.kurilenko\source\repos\TrainingCRM\ImporterService\bin\Debug\ImporterService.exe
+   logfile = C:\Users\a.kurilenko\source\repos\TrainingCRM\ImporterService\bin\Debug\ImporterService.InstallLog
+Uninstalling assembly 'C:\Users\a.kurilenko\source\repos\TrainingCRM\ImporterService\bin\Debug\ImporterService.exe'.
+Affected parameters are:
+   logtoconsole = 
+   assemblypath = C:\Users\a.kurilenko\source\repos\TrainingCRM\ImporterService\bin\Debug\ImporterService.exe
+   logfile = C:\Users\a.kurilenko\source\repos\TrainingCRM\ImporterService\bin\Debug\ImporterService.InstallLog
+Removing EventLog source ImporterService.
+Service ImporterService is being removed from the system...
+Service ImporterService was successfully removed from the system.
+Installing assembly 'C:\Users\a.kurilenko\source\repos\TrainingCRM\ImporterService\bin\Debug\ImporterService.exe'.
+Affected parameters are:
+   logtoconsole = 
+   assemblypath = C:\Users\a.kurilenko\source\repos\TrainingCRM\ImporterService\bin\Debug\ImporterService.exe
+   logfile = C:\Users\a.kurilenko\source\repos\TrainingCRM\ImporterService\bin\Debug\ImporterService.InstallLog
+Installing service ImporterService...
+Service ImporterService has been successfully installed.
+Creating EventLog source ImporterService in log Application...
+Committing assembly 'C:\Users\a.kurilenko\source\repos\TrainingCRM\ImporterService\bin\Debug\ImporterService.exe'.
+Affected parameters are:
+   logtoconsole = 
+   assemblypath = C:\Users\a.kurilenko\source\repos\TrainingCRM\ImporterService\bin\Debug\ImporterService.exe
+   logfile = C:\Users\a.kurilenko\source\repos\TrainingCRM\ImporterService\bin\Debug\ImporterService.InstallLog
+Uninstalling assembly 'C:\Users\a.kurilenko\source\repos\TrainingCRM\ImporterService\bin\Debug\ImporterService.exe'.
+Affected parameters are:
+   logtoconsole = 
+   assemblypath = C:\Users\a.kurilenko\source\repos\TrainingCRM\ImporterService\bin\Debug\ImporterService.exe
+   logfile = C:\Users\a.kurilenko\source\repos\TrainingCRM\ImporterService\bin\Debug\ImporterService.InstallLog
+Removing EventLog source ImporterService.
+Service ImporterService is being removed from the system...
+Service ImporterService was successfully removed from the system.
+Installing assembly 'C:\Users\a.kurilenko\source\repos\TrainingCRM\ImporterService\bin\Debug\ImporterService.exe'.
+Affected parameters are:
+   logtoconsole = 
+   assemblypath = C:\Users\a.kurilenko\source\repos\TrainingCRM\ImporterService\bin\Debug\ImporterService.exe
+   logfile = C:\Users\a.kurilenko\source\repos\TrainingCRM\ImporterService\bin\Debug\ImporterService.InstallLog
+Installing service ImporterService...
+Service ImporterService has been successfully installed.
+Creating EventLog source ImporterService in log Application...
+Committing assembly 'C:\Users\a.kurilenko\source\repos\TrainingCRM\ImporterService\bin\Debug\ImporterService.exe'.
+Affected parameters are:
+   logtoconsole = 
+   assemblypath = C:\Users\a.kurilenko\source\repos\TrainingCRM\ImporterService\bin\Debug\ImporterService.exe
+   logfile = C:\Users\a.kurilenko\source\repos\TrainingCRM\ImporterService\bin\Debug\ImporterService.InstallLog
+Uninstalling assembly 'C:\Users\a.kurilenko\source\repos\TrainingCRM\ImporterService\bin\Debug\ImporterService.exe'.
+Affected parameters are:
+   logtoconsole = 
+   assemblypath = C:\Users\a.kurilenko\source\repos\TrainingCRM\ImporterService\bin\Debug\ImporterService.exe
+   logfile = C:\Users\a.kurilenko\source\repos\TrainingCRM\ImporterService\bin\Debug\ImporterService.InstallLog
+Removing EventLog source ImporterService.
+Service ImporterService is being removed from the system...
+Service ImporterService was successfully removed from the system.
+Installing assembly 'C:\Users\a.kurilenko\source\repos\TrainingCRM\ImporterService\bin\Debug\ImporterService.exe'.
+Affected parameters are:
+   logtoconsole = 
+   assemblypath = C:\Users\a.kurilenko\source\repos\TrainingCRM\ImporterService\bin\Debug\ImporterService.exe
+   logfile = C:\Users\a.kurilenko\source\repos\TrainingCRM\ImporterService\bin\Debug\ImporterService.InstallLog
+Installing service ImporterService...
+Service ImporterService has been successfully installed.
+Creating EventLog source ImporterService in log Application...
+Committing assembly 'C:\Users\a.kurilenko\source\repos\TrainingCRM\ImporterService\bin\Debug\ImporterService.exe'.
+Affected parameters are:
+   logtoconsole = 
+   assemblypath = C:\Users\a.kurilenko\source\repos\TrainingCRM\ImporterService\bin\Debug\ImporterService.exe
+   logfile = C:\Users\a.kurilenko\source\repos\TrainingCRM\ImporterService\bin\Debug\ImporterService.InstallLog

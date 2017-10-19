@@ -37,6 +37,7 @@ namespace Training.Importer.DataProccesor
             {
                 try
                 {
+                    Console.WriteLine("Entity {0} was locked using the key = {1}", entity.GetType(), entity.UniqueIdentifier);
                     logger.InfoFormat("Entity {0} was locked using the key = {1}", entity.GetType(), entity.UniqueIdentifier);
                     return dataProcessor.Import(entity);
                 }
