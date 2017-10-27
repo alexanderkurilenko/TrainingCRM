@@ -1,7 +1,9 @@
 <?xml version="1.0"?>
-<User xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
-  <Id>00000000-0000-0000-0000-000000000000</Id>
-  <Name>f</Name>
-  <Age>19</Age>
-  <Hobby>d</Hobby>
-</User>
+<ArrayOfUser xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <User>
+    <Id>00000000-0000-0000-0000-000000000000</Id>
+    <Name>f</Name>
+    <Age>19</Age>
+    <Hobby>d</Hobby>
+  </User>
+</ArrayOfUser>

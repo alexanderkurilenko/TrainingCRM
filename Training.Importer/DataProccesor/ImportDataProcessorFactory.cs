@@ -30,7 +30,11 @@ namespace Training.Importer.DataProccesor
                 
                 return kernel.Get<RecordLockDataProcessorDecorator<PortalTest, kurdev_portal_test>>();
             }
-            
+            if (entityType == typeof(Importer.ImportType.Models.Contact))
+            {
+
+                return kernel.Get<RecordLockDataProcessorDecorator<Importer.ImportType.Models.Contact, Contact>>();
+            }
             return null;
         }
     }

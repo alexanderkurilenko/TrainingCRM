@@ -94,6 +94,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="ConfigurationSections\ImporterFolderSection.cs" />
+    <Compile Include="DataAccess\ContactDataAccess.cs" />
     <Compile Include="DataAccess\CrmConnectionConfig.cs" />
     <Compile Include="DataAccess\GenericDataAccess.cs" />
     <Compile Include="DataAccess\OrganizationServiceFactory.cs" />

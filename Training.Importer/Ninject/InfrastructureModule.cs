@@ -37,8 +37,9 @@ namespace Training.Importer.Ninject
             Bind<IImportDeserializerFactory>().To<NinjectXmlDeserializerFactory>();
             Bind<IImportDataProcessorFactory>().To<ImportDataProcessorFactory>();
             Bind<IImportDeserializer>().To<GenericXmlImportDeserializer<PortalTests,PortalTest>>();
+            Bind<IImportDeserializer>().To<GenericXmlImportDeserializer<Importer.ImportType.Models.Contacts, Importer.ImportType.Models.Contact>>();
             Bind<IImportDeserializer>().To<GenericXmlImportDeserializer<Users, User>>();
-
+            
             Bind<IKernel>().ToMethod(context => context.Kernel).WhenInjectedInto<ImportDataProcessorFactory>();
 
         }

@@ -27,12 +27,15 @@ namespace Training.Console
         {
             
 
-            XmlSerializer formatter = new XmlSerializer(typeof(User));
+            
             User test = new User() { Name="f",Age=19,Hobby="d"};
+            var users = new List<User>();
+            users.Add(test);
+            XmlSerializer formatter = new XmlSerializer(users.GetType());
             // получаем поток, куда будем записывать сериализованный объект
             using (FileStream fs = new FileStream("test.xml", FileMode.OpenOrCreate))
             {
-                formatter.Serialize(fs, test);
+                formatter.Serialize(fs, users);
 
                 System.Console.WriteLine("Объект сериализован");
             }

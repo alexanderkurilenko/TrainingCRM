@@ -17,6 +17,8 @@ namespace Training.Importer.Ninject
             //Bind<ImportDataProcessor<PortalTest, kurdev_portal_test>>().To<PortalTestDataProcessor>();
             Bind<ImportDataProcessor<PortalTest, kurdev_portal_test>>().To<PortalTestDataProcessor>()
                    .WhenInjectedExactlyInto<RecordLockDataProcessorDecorator<PortalTest, kurdev_portal_test>>();
+            Bind<ImportDataProcessor<Importer.ImportType.Models.Contact, Contact>>().To<ContactDataProcessor>()
+                   .WhenInjectedExactlyInto<RecordLockDataProcessorDecorator<Importer.ImportType.Models.Contact, Contact>>();
         }
     }
 }

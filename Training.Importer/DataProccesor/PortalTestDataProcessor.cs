@@ -36,6 +36,7 @@ namespace Training.Importer.DataProccesor
 
         protected override kurdev_portal_test UpdateExisting(kurdev_portal_test crmEntity, PortalTest importEntity)
         {
+            
             SetDataForUpdate(ref crmEntity, importEntity,crmEntity.Id);
             portalTestDataAccess.Detach(crmEntity);
             portalTestDataAccess.Update(crmEntity);
